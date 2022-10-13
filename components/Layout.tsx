@@ -16,7 +16,7 @@ export default function Layout({children}:LayoutProps) {
             <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navbar />
-            <main>
+            <main className=''>
             {children}
             </main>
             <Footer />

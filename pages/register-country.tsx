@@ -62,10 +62,10 @@ export default function RegisterCountry() {
         }
     }
 
-    return (
-        <div className="">
+    return ( 
+        <div className=" flex justify-center items-center ">
 
-            <div className="">
+            <div className="  text-gray-500  p-10 rounded-md border shadow">
 
                 <form onSubmit={handleSubmit}>
                 {
@@ -80,37 +80,38 @@ export default function RegisterCountry() {
                 }
                 {
                     success_message ? (
-                        <p className="">{success_message}. Go to <Link href="/"><a>home</a></Link>
+                        <p className="">{success_message}. Go to <Link href="/countries"><a className=' text-violet-700 font-bold cursor-pointer'>Countries</a></Link>
                         </p>
                     ) : null
                 }
-                <div className="">
-                    <label>Country name</label>
-                    <input type="text" value={country} placeholder="Country name" onChange={ (e) => setCountry(e.target.value)}  />
+                <div className=" my-2">
+                    {/* <label className=' font-bold mx-2'>Country name</label> */}
+                    <input className=' border px-3 py-2 outline-none ' type="text" value={country} placeholder="Country name" onChange={ (e) => setCountry(e.target.value)}  />
                 </div>
 
-                <div className="">
-                    <label>Year</label>
-                    <input type="number" value={year} placeholder="Year" onChange={ (e) => setYear(e.target.value)} />
+                <div className=" my-2">
+                    {/* <label className=' font-bold mx-2'>Year</label> */}
+                    <input className=' border px-3 py-2 outline-none ' type="number" value={year} placeholder="Year" onChange={ (e) => setYear(e.target.value)} />
                 </div>
 
-                <div className="">
-                    <label>Area</label>
-                    <input type="number" value={area} placeholder="Area" onChange={ e => setArea(e.target.value)} />
+                <div className="my-2">
+                    {/* <label className=' font-bold mx-2'>Area</label> */}
+                    <input className=' border px-3 py-2 outline-none ' type="number" value={area} placeholder="Area" onChange={ e => setArea(e.target.value)} />
                 </div>
 
-                <div className="">
-                    <label>Total population</label>
-                    <input type="number" value={totalPopulation} placeholder="Total population" onChange={ e => setTotalPopulation(e.target.value)} />
+                <div className=" my-2">
+                    {/* <label className=' font-bold mx-2'>Total population</label> */}
+                    <input className=' border px-3 py-2 outline-none ' type="number" value={totalPopulation} placeholder="Total population" onChange={ e => setTotalPopulation(e.target.value)} />
                 </div>
                 
-                <div className="">
-                    <button type="submit">
+                <div className="my-2">
+                    <button className='mt-4 bg-violet-700 p-3 w-40 flex justify-center items-center rounded-md text-white hover:bg-violet-500' type="submit">
                         {
                             loading ? 'Loading' : "Register Country"
                         }
                     </button>
                 </div>
+   
                 </form>
 
             </div>
